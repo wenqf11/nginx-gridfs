@@ -1,10 +1,12 @@
 ## About
 gridfs module for nginx.  
 >
-[nginx-gridfs](https://github.com/mdirolf/nginx-gridfs.git) author don't update for many year, the project cannot support MongoDB Auth(SCRAM-SHA-1), so rewrite it.
+I forked from [nginx-gridfs](https://github.com/nieoding/nginx-gridfs) but it onely support _id for PrimaryKey, So I migrated key support feature from mdirolf's 
+[nginx-gridfs](https://github.com/mdirolf/nginx-gridfs.git).
 
-## Version
-origin v1(Now): only support _id for PrimaryKey
+## Feature
+Support password and non-password authentication for nginx, mongo-gridfs connection
+Tested on nginx(1.12.2, 1.18.0) 
 
 ## Installation
 > only test build on centos
@@ -30,7 +32,7 @@ origin v1(Now): only support _id for PrimaryKey
 ```ini
 # nginx.conf
 location /media/ {
-    gridfs my_app;
+    gridfs my_app field=filename type=string;
     mongo mongodb://username:password@127.0.0.1:27017;
 }
 ```
