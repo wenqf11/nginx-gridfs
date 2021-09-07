@@ -5,8 +5,7 @@ I forked from [nginx-gridfs](https://github.com/nieoding/nginx-gridfs) but it on
 [nginx-gridfs](https://github.com/mdirolf/nginx-gridfs.git).
 
 ## Feature
-> Support password and non-password authentication for nginx, mongo-gridfs connection
-> Tested on nginx(1.12.2, 1.18.0) 
+> Support password and non-password authentication for nginx, mongo-gridfs connection, tested on Nginx(1.12.2, 1.18.0), MongoDB(3.6, 4.0)
 
 ## Installation
 > only test build on centos
